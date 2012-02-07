@@ -1,0 +1,5 @@
+HISTSIZE=10000
+export HISTSIZE
+HISTTIMEFORMAT='%F %T ' 
+export HISTTIMEFORMAT
+export CDPATH=.:/usr/local/ph3
