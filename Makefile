@@ -9,3 +9,4 @@ all:
 	cat profile >> /etc/profile
 	cp -a bashrc /root/.bashrc
 	. /root/.bashrc
+	cp -a vim/* /etc/vim/
