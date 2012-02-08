@@ -10,3 +10,5 @@ all:
 	cp -a bashrc /root/.bashrc
 	. /root/.bashrc
 	cp -a vim/* /etc/vim/
+	cp locale.gen /etc
+	locale-gen
