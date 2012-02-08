@@ -12,3 +12,4 @@ all:
 	cp -a vim/* /etc/vim/
 	cp locale.gen /etc
 	locale-gen
+	ssh-keygen -t rsa
