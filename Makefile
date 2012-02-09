@@ -6,6 +6,7 @@ squeeze-backports:
 	apt-get dist-upgrade
 	apt-file update
 	dpkg-reconfigure apticron
+	cp -a apticron /etc/cron.d/apticron
 all:
 	cat profile >> /etc/profile
 	cp -a bashrc /root/.bashrc

@@ -1,0 +1,3 @@
+# cron entry for apticron
+
+34 18 * * mon root test -x /usr/sbin/apticron && /usr/sbin/apticron --cron
