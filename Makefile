@@ -18,6 +18,5 @@ all:
 	echo "/usr/local/lib/" > /etc/ld.so.conf
 	ldconfig
 	./changesnmp.sh
-	cp -a snmpd.conf /etc/snmpd.conf
+	cp -a snmpd.conf /etc/snmp/snmpd.conf
 	/etc/init.d/snmpd restart
-
