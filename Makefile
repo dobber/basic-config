@@ -17,9 +17,7 @@ all:
 	ssh-keygen -t rsa
 	echo "/usr/local/lib/" > /etc/ld.so.conf
 	ldconfig
-	PASSWD=`dd if=/dev/urandom count=1 2> /dev/null | md5sum | cut -c-26`
-	sed -ei s/PAROLA/$PASSWD/ snmpd.conf
+	./changesnmp.sh
 	cp -a snmpd.conf /etc/snmpd.conf
 	/etc/init.d/snmpd restart
 
-	echo "SNMPD PASSWORD IS \"$PASSWD\""
