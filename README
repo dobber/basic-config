@@ -1,0 +1,7 @@
+INSTALLATION
+
+apt-get install git make
+git clone git@git:basic-config.git/ /root/basic-config
+cd /root/basic-config/
+make squeeze-backports
+make all
