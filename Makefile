@@ -20,3 +20,5 @@ all:
 	./changesnmp.sh
 	cp -a snmpd.conf /etc/snmp/snmpd.conf
 	/etc/init.d/snmpd restart
+	echo > /etc/motd
+	echo > /etc/motd.tail
