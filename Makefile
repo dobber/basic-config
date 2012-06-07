@@ -21,5 +21,7 @@ all:
 	./changesnmp.sh
 	cp -a snmpd.conf /etc/snmp/snmpd.conf
 	/etc/init.d/snmpd restart
+	cp -a nrpe.cfg /etc/nagios/nrpe.cfg
+	/etc/init.d/nagios-nrpe-server restart
 	echo > /etc/motd
 	echo > /etc/motd.tail
