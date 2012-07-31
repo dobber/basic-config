@@ -25,4 +25,4 @@ all:
 	/etc/init.d/nagios-nrpe-server restart
 	echo > /etc/motd
 	echo > /etc/motd.tail
-	rm -fr /etc/cron.daily/man-db /etc/cron.weekly/man-db
+	rm -fr /etc/cron.daily/man-db /etc/cron.weekly/man-db /etc/cron.daily/mlocate
