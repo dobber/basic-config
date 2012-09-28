@@ -58,7 +58,7 @@
 # from):
 
 #       sec.name  source          community
-com2sec paranoid  209.25.134.4/32  5c9ef7f3b8fd3e4ce9c7e6055c
+com2sec paranoid  209.25.134.4/32  PAROLA
 #com2sec readonly  default         public
 #com2sec readwrite default         private
 

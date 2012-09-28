@@ -37,3 +37,5 @@ all:
 	echo > /etc/motd
 	echo > /etc/motd.tail
 	rm -fr /etc/cron.daily/man-db /etc/cron.weekly/man-db /etc/cron.daily/mlocate
+	cp -a sysstat /etc/default/sysstat
+	/etc/init.d/sysstat restart
