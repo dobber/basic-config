@@ -40,3 +40,5 @@ all:
 	cp -a sysstat /etc/default/sysstat
 	/etc/init.d/sysstat restart
 #	sensors-detect
+	cp -a check_mk /etc/xinetd.d/check_mk
+	/etc/init.d/xinetd restart
