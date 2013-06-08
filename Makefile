@@ -33,6 +33,7 @@ all:
 	ssh-keygen -t rsa
 	echo "/usr/local/lib/" > /etc/ld.so.conf
 	ldconfig
+	dpkg-reconfigure exim4-config
 	./changesnmp.sh
 	cp -a snmpd.conf-new /etc/snmp/snmpd.conf
 	/etc/init.d/snmpd restart
