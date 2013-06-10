@@ -24,27 +24,37 @@ wheezy-backports:
 	apt-get clean
 
 all:
+	# some bash configs
 	cat profile >> /etc/profile
 	cp -a bashrc /root/.bashrc
 	. /root/.bashrc
 	cp -a vim/* /etc/vim/
 	cp locale.gen /etc
 	locale-gen
+	# ssh keys
 	ssh-keygen -t rsa
 	echo "/usr/local/lib/" > /etc/ld.so.conf
 	ldconfig
-	dpkg-reconfigure exim4-config
+	# exim4 for apticron
+	sed -e s/HOSTNAME/$HOSTNAME/ update-exim4.conf.conf > update-exim4.conf.conf-new
+	mv update-exim4.conf.conf-new /etc/exim4/update-exim4.conf.conf
+	/etc/init.d/exim4 restart
+	# snmpd for servman, observium
 	./changesnmp.sh
 	cp -a snmpd.conf-new /etc/snmp/snmpd.conf
 	/etc/init.d/snmpd restart
+	# nrpe for nagios
 	cp -a nrpe.cfg /etc/nagios/nrpe.cfg
 	/etc/init.d/nagios-nrpe-server restart
+	# even more tweaks
 	echo > /etc/motd
 	echo > /etc/motd.tail
 	rm -fr /etc/cron.daily/man-db /etc/cron.weekly/man-db /etc/cron.daily/mlocate
+	# sysstat for process accounting
 	cp -a sysstat /etc/default/sysstat
 	/etc/init.d/sysstat restart
 #	sensors-detect
+	# check_mk, hddtemp for observium
 	cp -a check_mk /etc/xinetd.d/check_mk
 	/etc/init.d/xinetd restart
 	cp -a hddtemp /etc/default/hddtemp
