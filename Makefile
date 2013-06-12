@@ -36,8 +36,7 @@ all:
 	echo "/usr/local/lib/" > /etc/ld.so.conf
 	ldconfig
 	# exim4 for apticron
-	sed -e s/HOSTNAME/$HOSTNAME/ update-exim4.conf.conf > update-exim4.conf.conf-new
-	mv update-exim4.conf.conf-new /etc/exim4/update-exim4.conf.conf
+	sed -e s/HOSTNAME/`hostname -f`/ update-exim4.conf.conf > /etc/exim4/update-exim4.conf.conf
 	/etc/init.d/exim4 restart
 	# snmpd for servman, observium
 	./changesnmp.sh
