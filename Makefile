@@ -58,3 +58,8 @@ all:
 	/etc/init.d/xinetd restart
 	cp -a hddtemp /etc/default/hddtemp
 	/etc/init.d/hddtemp restart
+
+	git clone https://github.com/dobber/dmesg_timestamp.git
+	(cd dmesg_timestamp && ./install)
+	git clone git://git.bastun.net/backup.git
+	(cd backup && make)
