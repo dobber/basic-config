@@ -1,4 +1,4 @@
-]squeeze-backports:
+squeeze-backports:
 	cp -a apt/squeeze-backports /etc/apt/sources.list
 	cp -a apt/pgdg-squeeze.list /etc/apt/sources.list.d/pgdg.list
 	wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
@@ -24,6 +24,8 @@ wheezy-backports:
 	apt-get clean
 
 all:
+	git config --global user.name $HOSTNAME
+	git config --global user.email admins@amln.net
 	# some bash configs
 	cat profile >> /etc/profile
 	cp -a bashrc /root/.bashrc
