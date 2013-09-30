@@ -24,8 +24,13 @@ wheezy-backports:
 all:
 	sed -ie  s/EMAIL=\"root\"/EMAIL=\"notify@amln.net\"/ /etc/apticron/apticron.conf
 	rm /etc/apticron/apticron.confe
+
 	git config --global user.name $HOSTNAME
 	git config --global user.email admins@amln.net
+	git config --global color.diff auto
+	git config --global color.status auto
+	git config --global color.branch auto
+
 	# some bash configs
 	cat profile >> /etc/profile
 	cp -a bashrc /root/.bashrc
