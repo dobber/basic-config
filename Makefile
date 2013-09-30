@@ -64,8 +64,8 @@ all:
 	git clone https://github.com/dobber/dmesg_timestamp.git
 	(cd dmesg_timestamp && ./install)
 
-	git clone https://gitlab.bastun.net/root/backup.git
+	git clone http://gitlab.bastun.net/root/backup.git
 	(cd backup && make)
 
-	git clone https://gitlab.bastun.net/root/dfw.git
+	git clone http://gitlab.bastun.net/root/dfw.git
 	(cd dfw && ./install && /var/lib/dfw/dfw.sh start)
