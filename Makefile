@@ -33,13 +33,7 @@ all:
 	git config --global color.branch auto
 
 	# configure denyhosts
-	for i in `host -t TXT networks srv.bastun.net|cut -f 2 -d\" | grep -ve [a-z] | grep -ve ^$` ; do 
-		INFO=`ipcalc $i |grep HostM`
-		real=`echo $INFO | awk '{print $2}' | cut -f 1,2,3 -d.`
-		min=`echo $INFO| awk '{print $2}' | cut -f 4 -d.`
-		max=`echo $INFO | awk '{print $6}' | cut -f 4 -d.`
-		echo $real.[$min-$max]
-	done > allowed-hosts
+	./denyhosts.sh
 	/etc/init.d/denyhosts restart
 
 	# some bash configs
