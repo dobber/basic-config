@@ -73,6 +73,8 @@ all:
 	cp -a hddtemp /etc/default/hddtemp
 	/etc/init.d/hddtemp restart
 
+	rm -rf /etc/cron.d/mdadm /etc/cron.daily/mdadm
+
 #	git clone https://github.com/dobber/dmesg_timestamp.git
 #	(cd dmesg_timestamp && ./install)
 
