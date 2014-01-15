@@ -1,3 +1,13 @@
+saucy:
+	cp -a apt/pgdg-wheezy.list /etc/apt/sources.list.d/pgdg.list
+	wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
+	apt-get update
+	apt-get -y install re2c xfsdump xfslibs-dev xfsprogs libattr1-dev apticron nano nmap uuid bind9-host ntp ntpdate ethstatus sqlite3 libsqlite3-dev hdparm debian-keyring g++-multilib dh-make alien rpm lsof lsscsi sysstat jed jed-common jed-extra bzip2 strace gcc g++ autoconf automake autoconf2.13 autoconf-archive gnu-standards libtool gettext gcc-4.4-locales g++-multilib g++-4.4-multilib gcc-multilib make automake1.9 flex bison gdb gcc-4.4-multilib libmudflap0-4.4-dev binfmt-support elfutils snmp snmpd apt-file nagios-nrpe-server tcl tk debian-keyring debian-archive-keyring strace traceroute telnet bc sysvinit-utils psmisc libncurses5-dev libmysqlclient-dev mtr git libfuse-dev libfuse2 libxml2-dev libreadline-dev vim-tiny sharutils smartmontools pkg-config libfuse-dev libfuse2 fuseext2 fuse-posixovl libssl-dev tcpdump iptraf screen parted libaio1 libaio-dev links ipcalc hddtemp lm-sensors sudo xinetd check-mk-agent libdbd-pg-perl libdbd-pgsql libdbi-perl python-distutils-extra python-setuptools psutils python-psutil python-psycopg2 libset-crontab-perl libschedule-cron-perl etckeeper vim dstat exim4-daemon-light denyhosts lvm2 unzip htop ltrace zsh
+	apt-get -y dist-upgrade
+	apt-file update
+	cp -a apt/apticron /etc/cron.d/apticron
+	apt-get clean
+
 squeeze-backports:
 	cp -a apt/squeeze-backports /etc/apt/sources.list
 	cp -a apt/pgdg-squeeze.list /etc/apt/sources.list.d/pgdg.list
@@ -47,7 +57,7 @@ all:
 	locale-gen
 	# ssh keys
 	ssh-keygen -t rsa
-	echo "/usr/local/lib/" > /etc/ld.so.conf
+	echo "/usr/local/lib/" >> /etc/ld.so.conf
 	ldconfig
 	# exim4 for apticron
 	sed -e s/HOSTNAME/`hostname -f`/ update-exim4.conf.conf > /etc/exim4/update-exim4.conf.conf
@@ -62,7 +72,7 @@ all:
 	# even more tweaks
 	echo > /etc/motd
 	echo > /etc/motd.tail
-	rm -fr /etc/cron.daily/man-db /etc/cron.weekly/man-db /etc/cron.daily/mlocate
+	rm -fr /etc/cron.daily/man-db /etc/cron.weekly/man-db /etc/cron.daily/mlocate /etc/cron.d/mdadm /etc/cron.daily/mdadm
 	# sysstat for process accounting
 	cp -a sysstat /etc/default/sysstat
 	/etc/init.d/sysstat restart
@@ -72,8 +82,6 @@ all:
 	/etc/init.d/xinetd restart
 	cp -a hddtemp /etc/default/hddtemp
 	/etc/init.d/hddtemp restart
-
-	rm -rf /etc/cron.d/mdadm /etc/cron.daily/mdadm
 
 #	git clone https://github.com/dobber/dmesg_timestamp.git
 #	(cd dmesg_timestamp && ./install)
