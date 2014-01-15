@@ -1,6 +1,6 @@
 #!/bin/bash
 PS3='Please select your datacenter: '
-options=("SisGroup, Sidney, Australia" "Telepoint, Sofia, Bulgaria" "Ancient Media, Sofia, Bulgaria" "Pulsant, Maidenhead, UK" "SteadFast, Chicago, USA" "Unknown" "Type in")
+options=("SisGroup, Sidney, Australia" "Telepoint, Sofia, Bulgaria" "Ancient Media, Sofia, Bulgaria" "Pulsant, Maidenhead, UK" "SteadFast, Chicago, USA" "Amazon Web Services" "Unknown" "Type in")
 select opt in "${options[@]}"
 do case $opt in
 	"${options[0]}")
@@ -35,6 +35,11 @@ do case $opt in
 		;;
 	"${options[6]}")
 		echo "Setting ${options[6]}"
+		DATACENTER=${options[6]}
+		break
+		;;
+	"${options[7]}")
+		echo "Setting ${options[7]}"
 		read DATACENTER
 		break
 		;;
