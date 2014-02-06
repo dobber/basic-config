@@ -1,7 +1,7 @@
 INSTALLATION
 
 apt-get install git make
-git clone http://gitlab.bastun.net/root/basic-config.git /root/basic-config
+git clone https://github.com/dobber/basic-config.git /root/basic-config
 cd /root/basic-config/
 make wheezy-backports
 make all
