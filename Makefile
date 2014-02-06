@@ -83,11 +83,5 @@ all:
 	cp -a hddtemp /etc/default/hddtemp
 	/etc/init.d/hddtemp restart
 
-#	git clone https://github.com/dobber/dmesg_timestamp.git
-#	(cd dmesg_timestamp && ./install)
-
-	git clone http://gitlab.bastun.net/root/backup.git
+	git clone https://github.com/dobber/backup.git
 	(cd backup && make)
-
-	git clone http://gitlab.bastun.net/root/dfw.git
-	(cd dfw && ./install && /var/lib/dfw/dfw.sh start)
