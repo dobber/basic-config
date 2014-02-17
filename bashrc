@@ -5,6 +5,8 @@ export PATH=/bin:/usr/bin:/usr/local/bin:/sbin:/usr/sbin:/usr/local/sbin:/usr/bi
 export PS1="\[\033[32m\][\u@\h]:\w\\$\[\033[0m\] "
 export EDITOR=vim
 export PAGER=less
+
+# shortcurts
 alias ls='ls -F --color=auto'
 alias v='ls -l'
 alias d="ls"
@@ -24,8 +26,12 @@ alias c="clear"
 alias inject="eject -t"
 alias dfh="df -h | head"
 alias grpe="grep"
-alias ph3="export PAGER=cat; psql ph3"
+alias dmesg="dmesg -T"
+
+# extras
 alias tt="awk '{if (\$1 && \$1 !~ /#/) print}'"
+
+# git stuff
 alias gl="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
 alias gss="git status"
-alias dmesg="dmesg -T"
+git config --global alias.undo-commit 'reset --soft HEAD^'
