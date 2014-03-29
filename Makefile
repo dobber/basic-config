@@ -2,7 +2,7 @@ saucy:
 	cp -a apt/pgdg-wheezy.list /etc/apt/sources.list.d/pgdg.list
 	wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 	apt-get update
-	apt-get -y install re2c xfsdump xfslibs-dev xfsprogs libattr1-dev apticron nano nmap uuid bind9-host ntp ntpdate ethstatus sqlite3 libsqlite3-dev hdparm debian-keyring g++-multilib dh-make alien rpm lsof lsscsi sysstat jed jed-common jed-extra bzip2 strace gcc g++ autoconf automake autoconf2.13 autoconf-archive gnu-standards libtool gettext gcc-4.4-locales g++-multilib g++-4.4-multilib gcc-multilib make automake1.9 flex bison gdb gcc-4.4-multilib libmudflap0-4.4-dev binfmt-support elfutils snmp snmpd apt-file nagios-nrpe-server tcl tk debian-keyring debian-archive-keyring strace traceroute telnet bc sysvinit-utils psmisc libncurses5-dev libmysqlclient-dev mtr git libfuse-dev libfuse2 libxml2-dev libreadline-dev vim-tiny sharutils smartmontools pkg-config libfuse-dev libfuse2 fuseext2 fuse-posixovl libssl-dev tcpdump iptraf screen parted libaio1 libaio-dev links ipcalc hddtemp lm-sensors sudo xinetd check-mk-agent libdbd-pg-perl libdbd-pgsql libdbi-perl python-distutils-extra python-setuptools psutils python-psutil python-psycopg2 libset-crontab-perl libschedule-cron-perl etckeeper vim dstat exim4-daemon-light denyhosts lvm2 unzip htop ltrace zsh arping
+	apt-get -y install re2c xfsdump xfslibs-dev xfsprogs libattr1-dev apticron nano nmap uuid bind9-host ntp ntpdate ethstatus sqlite3 libsqlite3-dev hdparm debian-keyring g++-multilib dh-make alien rpm lsof lsscsi sysstat jed jed-common jed-extra bzip2 strace gcc g++ autoconf automake autoconf2.13 autoconf-archive gnu-standards libtool gettext gcc-4.4-locales g++-multilib g++-4.4-multilib gcc-multilib make automake1.9 flex bison gdb gcc-4.4-multilib libmudflap0-4.4-dev binfmt-support elfutils snmp snmpd apt-file nagios-nrpe-server tcl tk debian-keyring debian-archive-keyring strace traceroute telnet bc sysvinit-utils psmisc libncurses5-dev libmysqlclient-dev mtr git libfuse-dev libfuse2 libxml2-dev libreadline-dev vim-tiny sharutils smartmontools pkg-config libfuse-dev libfuse2 fuseext2 fuse-posixovl libssl-dev tcpdump iptraf screen parted libaio1 libaio-dev lynx links ipcalc hddtemp lm-sensors sudo xinetd check-mk-agent libdbd-pg-perl libdbd-pgsql libdbi-perl python-distutils-extra python-setuptools psutils python-psutil python-psycopg2 libset-crontab-perl libschedule-cron-perl etckeeper vim dstat exim4-daemon-light denyhosts lvm2 unzip htop ltrace zsh arping
 	apt-get -y dist-upgrade
 	apt-file update
 	cp -a apt/apticron /etc/cron.d/apticron
@@ -14,7 +14,7 @@ squeeze-backports:
 	wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 	apt-get update
 	apt-get -y remove sendmail sendmail-base sendmail-bin sendmail-cf sendmail-doc
-	apt-get -y install re2c xfsdump xfslibs-dev xfsprogs libattr1-dev apticron nano nmap uuid bind9-host ntp ntpdate ethstatus sqlite3 libsqlite3-dev hdparm debian-keyring g++-multilib dh-make alien rpm lsof lsscsi sysstat jed jed-common jed-extra bzip2 strace gcc g++ autoconf automake autoconf2.13 autoconf-archive gnu-standards libtool gettext gcc-4.4-locales g++-multilib g++-4.4-multilib gcc-multilib make automake1.9 flex bison gdb gcc-4.4-multilib libmudflap0-4.4-dev libcloog-ppl0 libppl-c2 libppl7 binfmt-support elfutils snmp snmpd apt-file nagios-nrpe-server tcl tk debian-keyring debian-archive-keyring strace traceroute telnet bc sysvinit-utils psmisc libncurses5-dev libmysqlclient-dev mtr git libfuse-dev libfuse2 fuse-utils libxml2-dev libreadline-dev vim-tiny sharutils smartmontools pkg-config fuse-utils libfuse-dev libfuse2 fuseext2 fuse-posixovl libssl-dev tcpdump iptraf screen parted libaio1 libaio-dev links ipcalc snmp-mibs-downloader hddtemp lm-sensors sudo xinetd check-mk-agent libdbd-pg-perl libdbi-perl libdbd-pgsql python-distutils-extra python-setuptools psutils python-psutil python-psycopg2 libset-crontab-perl libschedule-cron-perl etckeeper vim dstat exim4-daemon-light denyhosts unzip arping
+	apt-get -y install re2c xfsdump xfslibs-dev xfsprogs libattr1-dev apticron nano nmap uuid bind9-host ntp ntpdate ethstatus sqlite3 libsqlite3-dev hdparm debian-keyring g++-multilib dh-make alien rpm lsof lsscsi sysstat jed jed-common jed-extra bzip2 strace gcc g++ autoconf automake autoconf2.13 autoconf-archive gnu-standards libtool gettext gcc-4.4-locales g++-multilib g++-4.4-multilib gcc-multilib make automake1.9 flex bison gdb gcc-4.4-multilib libmudflap0-4.4-dev libcloog-ppl0 libppl-c2 libppl7 binfmt-support elfutils snmp snmpd apt-file nagios-nrpe-server tcl tk debian-keyring debian-archive-keyring strace traceroute telnet bc sysvinit-utils psmisc libncurses5-dev libmysqlclient-dev mtr git libfuse-dev libfuse2 fuse-utils libxml2-dev libreadline-dev vim-tiny sharutils smartmontools pkg-config fuse-utils libfuse-dev libfuse2 fuseext2 fuse-posixovl libssl-dev tcpdump iptraf screen parted libaio1 libaio-dev lynx links ipcalc snmp-mibs-downloader hddtemp lm-sensors sudo xinetd check-mk-agent libdbd-pg-perl libdbi-perl libdbd-pgsql python-distutils-extra python-setuptools psutils python-psutil python-psycopg2 libset-crontab-perl libschedule-cron-perl etckeeper vim dstat exim4-daemon-light denyhosts unzip arping
 	apt-get -y remove samba bind9
 	apt-get -y dist-upgrade
 	apt-file update
@@ -27,7 +27,7 @@ wheezy-backports:
 	wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
 	apt-get update
 	apt-get -y remove sendmail sendmail-base sendmail-bin sendmail-cf sendmail-doc
-	apt-get -y install re2c xfsdump xfslibs-dev xfsprogs libattr1-dev apticron nano nmap uuid bind9-host ntp ntpdate ethstatus sqlite3 libsqlite3-dev hdparm debian-keyring g++-multilib dh-make alien rpm lsof lsscsi sysstat jed jed-common jed-extra bzip2 strace gcc g++ autoconf automake autoconf2.13 autoconf-archive gnu-standards libtool gettext gcc-4.4-locales g++-multilib g++-4.4-multilib gcc-multilib make automake1.9 flex bison gdb gcc-4.4-multilib libmudflap0-4.4-dev libcloog-ppl0 binfmt-support elfutils snmp snmpd apt-file nagios-nrpe-server tcl tk debian-keyring debian-archive-keyring strace traceroute telnet bc sysvinit-utils psmisc libncurses5-dev libmysqlclient-dev mtr git libfuse-dev libfuse2 fuse-utils libxml2-dev libreadline-dev vim-tiny sharutils smartmontools pkg-config fuse-utils libfuse-dev libfuse2 fuseext2 fuse-posixovl libssl-dev tcpdump iptraf screen parted libaio1 libaio-dev links ipcalc snmp-mibs-downloader hddtemp lm-sensors sudo xinetd check-mk-agent libdbd-pg-perl libdbd-pgsql libdbi-perl python-distutils-extra python-setuptools psutils python-psutil python-psycopg2 libset-crontab-perl libschedule-cron-perl etckeeper vim dstat exim4-daemon-light denyhosts lvm2 unzip htop ltrace zsh arping
+	apt-get -y install re2c xfsdump xfslibs-dev xfsprogs libattr1-dev apticron nano nmap uuid bind9-host ntp ntpdate ethstatus sqlite3 libsqlite3-dev hdparm debian-keyring g++-multilib dh-make alien rpm lsof lsscsi sysstat jed jed-common jed-extra bzip2 strace gcc g++ autoconf automake autoconf2.13 autoconf-archive gnu-standards libtool gettext gcc-4.4-locales g++-multilib g++-4.4-multilib gcc-multilib make automake1.9 flex bison gdb gcc-4.4-multilib libmudflap0-4.4-dev libcloog-ppl0 binfmt-support elfutils snmp snmpd apt-file nagios-nrpe-server tcl tk debian-keyring debian-archive-keyring strace traceroute telnet bc sysvinit-utils psmisc libncurses5-dev libmysqlclient-dev mtr git libfuse-dev libfuse2 fuse-utils libxml2-dev libreadline-dev vim-tiny sharutils smartmontools pkg-config fuse-utils libfuse-dev libfuse2 fuseext2 fuse-posixovl libssl-dev tcpdump iptraf screen parted libaio1 libaio-dev lynx links ipcalc snmp-mibs-downloader hddtemp lm-sensors sudo xinetd check-mk-agent libdbd-pg-perl libdbd-pgsql libdbi-perl python-distutils-extra python-setuptools psutils python-psutil python-psycopg2 libset-crontab-perl libschedule-cron-perl etckeeper vim dstat exim4-daemon-light denyhosts lvm2 unzip htop ltrace zsh arping
 	apt-get -y dist-upgrade
 	apt-get -y -t wheezy-backports install linux-image-3.12-0.bpo.1-amd64 linux-headers-3.12-0.bpo.1-amd64 linux-tools-3.12
 	apt-file update
@@ -35,14 +35,16 @@ wheezy-backports:
 	apt-get clean
 
 all:
-	sed -ie  s/EMAIL=\"root\"/EMAIL=\"notify@amln.net\"/ /etc/apticron/apticron.conf
+	sed -ie  s/EMAIL=\"root\"/EMAIL=\"zlobber@gmail.com\"/ /etc/apticron/apticron.conf
 	rm /etc/apticron/apticron.confe
 
-	git config --global user.name $HOSTNAME
-	git config --global user.email admins@amln.net
+	git config --global user.name "Ivan Dimitrov"
+	git config --global user.email zlobber@gmail.com
 	git config --global color.diff auto
 	git config --global color.status auto
 	git config --global color.branch auto
+	git config --global core.autocrlf input
+	git config --global core.safecrlf false
 
 	# configure denyhosts
 	./denyhosts.sh
